@@ -1,10 +1,12 @@
 import React from "react";
-import Buttons from "./Buttons";
+import BarSlider from "./BarSlider";
+import SortButtons from "./SortButtons";
 
 const Footer = () => {
   return (
     <footer>
-      <Buttons />
+      <BarSlider />
+      <SortButtons />
     </footer>
   );
 };

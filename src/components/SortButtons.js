@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 
-const Buttons = () => {
+const SortButtons = () => {
   const quickSortButton = () => {
     console.log("quick sort button");
   };
@@ -23,4 +23,4 @@ const Buttons = () => {
   );
 };
 
-export default Buttons;
+export default SortButtons;
