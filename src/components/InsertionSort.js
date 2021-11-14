@@ -6,7 +6,11 @@ const InsertionSort = () => {
     console.log("insertion sort button");
   };
 
-  return <Button onClick={insertionSortButton}>Insertion Sort</Button>;
+  return (
+    <Button className="sort-button" onClick={insertionSortButton}>
+      Insertion Sort
+    </Button>
+  );
 };
 
 export default InsertionSort;

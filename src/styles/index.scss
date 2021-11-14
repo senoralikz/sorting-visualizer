@@ -1,5 +1,11 @@
 @import "~bootstrap/scss/bootstrap";
 
+header {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -7,6 +13,19 @@ footer {
   background-color: #000;
 }
 
-.bar-range-value {
+.bar-value {
+  width: 75px;
+}
+
+.v-divider {
+  border-left: 1px solid #fff;
+  height: 50px;
+}
+
+.footer-text {
   color: #fff;
+}
+
+.sort-button {
+  width: 125px;
 }

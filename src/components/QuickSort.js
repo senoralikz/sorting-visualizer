@@ -6,7 +6,11 @@ const QuickSort = () => {
     console.log("quick sort button");
   };
 
-  return <Button onClick={quickSortButton}>Quick Sort</Button>;
+  return (
+    <Button className="sort-button" onClick={quickSortButton}>
+      Quick Sort
+    </Button>
+  );
 };
 
 export default QuickSort;

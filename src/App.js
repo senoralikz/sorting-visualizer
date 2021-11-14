@@ -3,10 +3,10 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
-      Sorting Visualizer
+    <>
+      <header>Sorting Visualizer</header>
       <Footer />
-    </div>
+    </>
   );
 }
 
