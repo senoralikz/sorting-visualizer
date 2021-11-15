@@ -7,7 +7,7 @@ const QuickSort = () => {
   };
 
   return (
-    <Button className="sort-button" onClick={quickSortButton}>
+    <Button className="sort-button align-self-center" onClick={quickSortButton}>
       Quick Sort
     </Button>
   );

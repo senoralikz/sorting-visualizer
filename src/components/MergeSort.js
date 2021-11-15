@@ -6,7 +6,7 @@ const MergeSort = () => {
     console.log("merge sort button");
   };
   return (
-    <Button className="sort-button" onClick={mergeSortButton}>
+    <Button className="sort-button align-self-center" onClick={mergeSortButton}>
       Merge Sort
     </Button>
   );

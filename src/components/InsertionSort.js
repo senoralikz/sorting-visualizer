@@ -7,7 +7,10 @@ const InsertionSort = () => {
   };
 
   return (
-    <Button className="sort-button" onClick={insertionSortButton}>
+    <Button
+      className="sort-button align-self-center"
+      onClick={insertionSortButton}
+    >
       Insertion Sort
     </Button>
   );
