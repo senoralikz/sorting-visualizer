@@ -2,10 +2,10 @@ import React from "react";
 import { useState } from "react";
 
 const BarSlider = () => {
-  const [bars, setBars] = useState("25");
+  const [bars, setBars] = useState(25);
 
   const handleChange = (e) => {
-    setBars(e.target.value);
+    setBars(parseInt(e.target.value));
     console.log("range value is", e.target.value);
   };
 

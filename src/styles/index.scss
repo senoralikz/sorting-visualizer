@@ -4,11 +4,13 @@ header {
   display: flex;
   justify-content: center;
   margin: 10px;
+  font-weight: 900;
+  font-size: x-large;
 }
 
-h1 {
-  font-weight: 900;
-}
+// h1 {
+//   font-weight: 900;
+// }
 
 footer {
   position: absolute;
@@ -39,4 +41,11 @@ footer {
 
 .sort-button {
   width: fit-content;
+}
+
+.value-alert {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 55px;
 }
