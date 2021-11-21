@@ -1,17 +1,16 @@
 import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+// import { useState, useEffect } from "react";
 
-const BarSlider = ({ grabBarQuant }) => {
-  const [numBars, setNumBars] = useState(25);
+const BarSlider = ({ numBars, handleBarSliderChange }) => {
+  // const [numBars, setNumBars] = useState(25);
 
-  const handleChange = (e) => {
-    setNumBars(parseInt(e.target.value));
-  };
+  // const handleBarSliderChange = (e) => {
+  //   setNumBars(parseInt(e.target.value));
+  // };
 
-  useEffect(() => {
-    grabBarQuant(numBars);
-  }, [grabBarQuant, numBars]);
+  // useEffect(() => {
+  //   grabBarQuant(numBars);
+  // }, [grabBarQuant, numBars]);
 
   // grabBarQuant(numBars);
 
@@ -19,10 +18,10 @@ const BarSlider = ({ grabBarQuant }) => {
     <div>
       <input
         type="range"
-        min="1"
+        min="5"
         max="50"
         value={numBars}
-        onChange={handleChange}
+        onChange={handleBarSliderChange}
       />
       <p className="footer-text">Number of Bars: {numBars}</p>
     </div>

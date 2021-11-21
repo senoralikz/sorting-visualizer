@@ -15,7 +15,7 @@ const BarValues = ({
           <input
             type="number"
             className="bar-value"
-            min="1"
+            min="5"
             value={minBarValue}
             onChange={handleMinValue}
           />
