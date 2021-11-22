@@ -2,7 +2,7 @@ import React from "react";
 
 const BarSlider = ({ numBars, handleBarSliderChange }) => {
   return (
-    <div>
+    <div className="align-self-center">
       <input
         type="range"
         min="5"

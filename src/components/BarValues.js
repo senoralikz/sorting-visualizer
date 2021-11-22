@@ -8,7 +8,7 @@ const BarValues = ({
   handleMaxValue,
 }) => {
   return (
-    <div>
+    <div className="align-self-center">
       <Stack direction="horizontal" gap={3}>
         <Stack>
           <p className="footer-text">Min Value </p>

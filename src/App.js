@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Bars from "./components/Bars";
 import Footer from "./components/Footer";
 
@@ -33,14 +33,14 @@ function App() {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
-  const createBarArray = () => {
+  const createBarArray = useCallback(() => {
     let array = [];
 
     for (let i = 0; i < numBars; i++) {
       array.push(randomNumsFromRange(minBarValue, maxBarValue));
     }
     setBars(array);
-  };
+  }, [maxBarValue, minBarValue, numBars]);
 
   useEffect(() => {
     console.log("min val is", minBarValue);

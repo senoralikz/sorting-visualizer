@@ -27,7 +27,7 @@ const Footer = ({
     <>
       <Stack>
         <Alerts showAlert={showAlert} setShowAlert={setShowAlert} />
-        <footer className="d-flex justify-content-evenly">
+        <footer className="d-flex justify-content-evenly pt-2 pb-2">
           <NewBars createBarArray={createBarArray} />
           <BarSlider
             numBars={numBars}
