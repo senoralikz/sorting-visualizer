@@ -6,6 +6,7 @@ import BarValues from "./BarValues";
 import MergeSort from "./MergeSort";
 import QuickSort from "./QuickSort";
 import InsertionSort from "./InsertionSort";
+import BubbleSort from "./BubbleSort";
 import Timer from "./Timer";
 import Alerts from "./Alerts";
 
@@ -18,13 +19,16 @@ const Footer = ({
   handleMaxValue,
   showAlert,
   setShowAlert,
+  createBarArray,
+  bars,
+  setBars,
 }) => {
   return (
     <>
       <Stack>
         <Alerts showAlert={showAlert} setShowAlert={setShowAlert} />
         <footer className="d-flex justify-content-evenly">
-          <NewBars />
+          <NewBars createBarArray={createBarArray} />
           <BarSlider
             numBars={numBars}
             handleBarSliderChange={handleBarSliderChange}
@@ -36,9 +40,14 @@ const Footer = ({
             handleMinValue={handleMinValue}
             handleMaxValue={handleMaxValue}
           />
+          {/* <Stack> */}
           <MergeSort />
-          <QuickSort />
+          <QuickSort bars={bars} setBars={setBars} />
+          {/* </Stack> */}
+          {/* <Stack> */}
           <InsertionSort />
+          <BubbleSort />
+          {/* </Stack> */}
           <div className="v-divider align-self-center"></div>
           <Timer />
         </footer>

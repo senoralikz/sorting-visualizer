@@ -1,21 +1,28 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
-const Bars = ({ numBars, minBarValue, maxBarValue }) => {
-  const [bars, setBars] = useState([]);
+const Bars = ({
+  numBars,
+  minBarValue,
+  maxBarValue,
+  bars,
+  setBars,
+  createBarArray,
+}) => {
+  // const [bars, setBars] = useState([]);
 
-  const randomNumsFromRange = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  };
+  // const randomNumsFromRange = (min, max) => {
+  //   return Math.floor(Math.random() * (max - min + 1) + min);
+  // };
 
-  const createBarArray = () => {
-    let array = [];
+  // const createBarArray = () => {
+  //   let array = [];
 
-    for (let i = 0; i < numBars; i++) {
-      array.push(randomNumsFromRange(minBarValue, maxBarValue));
-    }
-    setBars(array);
-  };
+  //   for (let i = 0; i < numBars; i++) {
+  //     array.push(randomNumsFromRange(minBarValue, maxBarValue));
+  //   }
+  //   setBars(array);
+  // };
 
   useEffect(() => {
     createBarArray();

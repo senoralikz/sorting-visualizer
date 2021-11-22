@@ -4,7 +4,7 @@ import Bars from "./components/Bars";
 import Footer from "./components/Footer";
 
 function App() {
-  // const [bars, setBars] = useState([]);
+  const [bars, setBars] = useState([]);
   const [numBars, setNumBars] = useState(25);
   const [minBarValue, setMinBarValue] = useState(20);
   const [maxBarValue, setMaxBarValue] = useState(500);
@@ -29,9 +29,18 @@ function App() {
         setShowAlert(true);
   };
 
-  // useEffect(() => {
-  //   console.log("number of bars", numBars);
-  // }, [numBars]);
+  const randomNumsFromRange = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
+
+  const createBarArray = () => {
+    let array = [];
+
+    for (let i = 0; i < numBars; i++) {
+      array.push(randomNumsFromRange(minBarValue, maxBarValue));
+    }
+    setBars(array);
+  };
 
   useEffect(() => {
     console.log("min val is", minBarValue);
@@ -41,21 +50,12 @@ function App() {
     console.log("min val is", maxBarValue);
   }, [maxBarValue]);
 
-  // const grabBarQuant = (barAmount) => {
-  //   console.log("number of bars", barAmount);
-  //   return barAmount;
-  // };
-
-  // const grabMaxValue = (maxVal) => {
-  //   console.log("max val is", maxVal);
-  // return maxVal;
-  // };
-
-  // const createBarArray = () => {};
-
   return (
     <>
       <Footer
+        bars={bars}
+        setBars={setBars}
+        createBarArray={createBarArray}
         numBars={numBars}
         minBarValue={minBarValue}
         maxBarValue={maxBarValue}
@@ -68,6 +68,9 @@ function App() {
       <header>Sorting Visualizer</header>
       <div className="bars d-flex justify-content-center align-items-end">
         <Bars
+          createBarArray={createBarArray}
+          bars={bars}
+          setBars={setBars}
           numBars={numBars}
           minBarValue={minBarValue}
           maxBarValue={maxBarValue}
