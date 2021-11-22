@@ -6,8 +6,8 @@ import Footer from "./components/Footer";
 function App() {
   // const [bars, setBars] = useState([]);
   const [numBars, setNumBars] = useState(25);
-  const [minBarValue, setMinBarValue] = useState(5);
-  const [maxBarValue, setMaxBarValue] = useState(200);
+  const [minBarValue, setMinBarValue] = useState(20);
+  const [maxBarValue, setMaxBarValue] = useState(500);
   const [showAlert, setShowAlert] = useState(false);
 
   const handleBarSliderChange = (e) => {
@@ -55,18 +55,6 @@ function App() {
 
   return (
     <>
-      <header>Sorting Visualizer</header>
-      <div className="bars d-flex justify-content-center align-items-end">
-        <Bars
-          numBars={numBars}
-          minBarValue={minBarValue}
-          maxBarValue={maxBarValue}
-        />
-      </div>
-      {/* {bars.map((value) => (
-        <div className="bars">{value}</div>
-      ))} */}
-      {/* <div>{grabBarQuant}</div> */}
       <Footer
         numBars={numBars}
         minBarValue={minBarValue}
@@ -77,6 +65,14 @@ function App() {
         handleMinValue={handleMinValue}
         handleMaxValue={handleMaxValue}
       />
+      <header>Sorting Visualizer</header>
+      <div className="bars d-flex justify-content-center align-items-end">
+        <Bars
+          numBars={numBars}
+          minBarValue={minBarValue}
+          maxBarValue={maxBarValue}
+        />
+      </div>
     </>
   );
 }

@@ -25,20 +25,18 @@ const Bars = ({ numBars, minBarValue, maxBarValue }) => {
   // console.log(bars);
   return bars.map((value, index) => (
     <div
-      style={{ borderLeft: "7px solid grey", height: `${value}px` }}
+      style={{
+        backgroundColor: "grey",
+        height: `${value}px`,
+        margin: "0 2px",
+        padding: "2px",
+        width: "75%",
+      }}
       key={index}
     >
-      {value}
+      <p className="bar-value d-flex justify-content-center">{value}</p>
     </div>
   ));
-
-  // return (
-  //   <div>
-  //     {idk.map((entry) => (
-  //       <div>{entry}</div>
-  //     ))}
-  //   </div>
-  // );
 };
 
 export default Bars;

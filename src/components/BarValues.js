@@ -14,8 +14,8 @@ const BarValues = ({
           <p className="footer-text">Min Value </p>
           <input
             type="number"
-            className="bar-value"
-            min="5"
+            className="min-max-value"
+            min="20"
             value={minBarValue}
             onChange={handleMinValue}
           />
@@ -24,8 +24,8 @@ const BarValues = ({
           <p className="footer-text">Max Value </p>
           <input
             type="number"
-            className="bar-value"
-            max="200"
+            className="min-max-value"
+            max="500"
             value={maxBarValue}
             onChange={handleMaxValue}
           />

@@ -1,19 +1,6 @@
 import React from "react";
-// import { useState, useEffect } from "react";
 
 const BarSlider = ({ numBars, handleBarSliderChange }) => {
-  // const [numBars, setNumBars] = useState(25);
-
-  // const handleBarSliderChange = (e) => {
-  //   setNumBars(parseInt(e.target.value));
-  // };
-
-  // useEffect(() => {
-  //   grabBarQuant(numBars);
-  // }, [grabBarQuant, numBars]);
-
-  // grabBarQuant(numBars);
-
   return (
     <div>
       <input
